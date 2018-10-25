@@ -1,7 +1,5 @@
 language: generic
 
-sudo: enabled
-
 env:
   global:
     - secure: KJiJNSPc2gyPFKKmPtrMFPf5J7gOqS8ievFEEq4KY4XvSLnusrQA1FMINA+DZGsLi2ptPTF3a6ZqAV4J0xXzhy4YhdXiSmTUaKvZY/kdaVII+pYjeEkzQ9Z6c3HE4ymKopgtB7HfNecUKpPoXGjnc3UUzOdePDnHC5nfY8HppoMavy4JXwMHHylbiNlMokCIj6g0HPpBt0ZxNZQtmz9Vd0gF0TySc5JVKHfMCp+wt47EXi/Y690cQ+/Nn6jOJhxTQBRH6edsL9nCruqNd9Dq0sDMesJaUY3+8BdggPxdf7zx8Vq79/1SPAeG0bk2LcPY1ZXidMMWABQ6d26uRU8bS/Z83EhxisQ4zz3kTVnCtdtil962vx3F95Mat34G9UxBjycmR3eCjMWsbSor04SvNAUOHKUNJP2HTzTere+asNdzRNAcHXf6z5+BH1wV4NOZ+fv6lONZ+axoPy+61bcmo+QwbCdfa+zco0L4Csyf5K8y+mjZ1cjebyZ12U5xcXZyNe0z8Bgs4WFUkOulvyay02kJFn4ROENLUAsxGZw8pEpwuBKymLum2ONGtefRKhO1baYj1K7XYEnSxkd2n+2Sv/W+NTpT4NIVZY2AFGVG3uCcTgVEvVN8OkfXrvtCkUyugWKQ9wnpN0VcxXdQL3z41/JhmCiGjm2kEe8AqDb+Pxg=
@@ -17,9 +15,7 @@ before_script:
     -O bin/terraform.zip
   - unzip bin/terraform.zip -d bin
   - rm bin/terraform.zip
-  - "./bin/terraform init terraform"
-  - sudo pip install --upgrade pip
-  - pip install awscli --upgrade
+  - pip install awscli --upgrade --user
 
 jobs:
   include:
