@@ -1,37 +1,37 @@
 language: generic
-cache:
-  directories:
-  - ".terraform"
+
 env:
   global:
-  - AWS_DEFAULT_REGION: eu-central-1
-  - TF_VAR_region: eu-central-1
-  # TF_VAR_access_key
-  - secure: Zx0idRZjzRB+QkrDjEI3M/ukYWq4rm/X1MRp5sETQMVhMtPTyeXJnsj3CiYHz+v/TJr2qNENnIvEDXiM4Ar+FjWKNw6Hu/9dEX6cFT6FBEVvvaOLXFJfBY5mSgJdqUqwcxNhL3ooTLcC7W9WwxKoLxa/DZ7Z1A/e+JfdTPyEOInogKMUoj9UFpR5lwsuv8eI+vgaY2EO+EfwQlaIWmPLv7X91Pu4JL4ST2TukuUP+22ZltJ15xXSFAIYMcvj1OiNe/nTwJk7/a34pMZNi1HImzugpLuf8sz+/WT2dgBARd0eBn/yEdI4lYwnPgpPB8ipPyC39j2fE9KfjUB70sckJ7Hy2+GdVXjew5h7o0fBSOVJtv2kLVkem/DvuvSqlzpMtju6MMfF7bHjCbHdKUjQKhLijvp4FrJr0caBtkM2+hax92vs37XKKzvEFFJuxNg/8kjPBQ4vt0WEUlsI3rh2NHOdLjCnWFe7LAuzkJKDHdrcZUqlHtDwMn9Syuk+iqwffOVnyxpXhTxT/6C4wpG7XTn2peZSSYYZhtSfkW3vTHwCnPo3Lq3nKSTejncg4jRXa2D0iqjPkOxDTCo1AWwJ5SgmV77rr3lzHBFzdIMiVya5PecLRL1WIE///8vh7IuXf12/z7I6p1N6wXxwcP4GEkmBKIDkWcQNtmFiGHXekcQ=
-  # TF_VAR_secret_key
-  - secure: MlXKFb5wgjSJE2VLYXVAL1zHsmpuUKBIyZqurZGKcL2PmPNB7Ls4+i/WNICmcgWqnlQrCV+qMEkmcJ45KuUf2okMY6vb/0crOSucA8C253GD+IQo/O1+k+sZVIsJ+7sl9DswHYOSiq6k+6qs1Dlmk2OFKgMG9Io5GC5MNpQBfjCnO8UrqN0VRiemo9+rctyp7fDZSnOXPuJ6w4Z4sY254snFgLnNMehbQxxSE19Oan/W0ijydvUl+no5qx550dgO1nwUAemZrU4/CxlIcFVXckAhrPSGXu0RYrxrnfVQfheW3w+wMLYm/Ojft70FwQQeI6Tviyy7oLOUHdQ6fM+2AruCvGWch9Y6Jj6JNjlE3E3uOMfq9f+a07kbrlN/IVRLrtiON4la6SQPt/FMYV8PGdwd6Z/RnsPAvGoTP/WYPfsgMXvsP3SGn/LnxJ+dIjOUcpTmnZ4NAbBdryWTvw3iy6Sj3W8G7XU8jSRzvpv0/ZV90ZgWUhsEIEjMUoDgSwE6UnLX6v4JKcfX4i3LmTUK6MPO5FtI0x97XzusaJk4hefR6PNsPozbSBKNdFE/ZHyik4/IZv3ysuowkx+OF3f80ZTq9wLnZ1wpOt/WVjjjShzVNXach6Gt/DCEtj/uRukPfFvms0KThLGu9MJRohkI83uQqWB5urhmWekzR37/POM=
+    - AWS_DEFAULT_REGION: eu-central-1
+    - TF_VAR_region: eu-central-1
+    # TF_VAR_access_key
+    - secure: Zx0idRZjzRB+QkrDjEI3M/ukYWq4rm/X1MRp5sETQMVhMtPTyeXJnsj3CiYHz+v/TJr2qNENnIvEDXiM4Ar+FjWKNw6Hu/9dEX6cFT6FBEVvvaOLXFJfBY5mSgJdqUqwcxNhL3ooTLcC7W9WwxKoLxa/DZ7Z1A/e+JfdTPyEOInogKMUoj9UFpR5lwsuv8eI+vgaY2EO+EfwQlaIWmPLv7X91Pu4JL4ST2TukuUP+22ZltJ15xXSFAIYMcvj1OiNe/nTwJk7/a34pMZNi1HImzugpLuf8sz+/WT2dgBARd0eBn/yEdI4lYwnPgpPB8ipPyC39j2fE9KfjUB70sckJ7Hy2+GdVXjew5h7o0fBSOVJtv2kLVkem/DvuvSqlzpMtju6MMfF7bHjCbHdKUjQKhLijvp4FrJr0caBtkM2+hax92vs37XKKzvEFFJuxNg/8kjPBQ4vt0WEUlsI3rh2NHOdLjCnWFe7LAuzkJKDHdrcZUqlHtDwMn9Syuk+iqwffOVnyxpXhTxT/6C4wpG7XTn2peZSSYYZhtSfkW3vTHwCnPo3Lq3nKSTejncg4jRXa2D0iqjPkOxDTCo1AWwJ5SgmV77rr3lzHBFzdIMiVya5PecLRL1WIE///8vh7IuXf12/z7I6p1N6wXxwcP4GEkmBKIDkWcQNtmFiGHXekcQ=
+    # TF_VAR_secret_key
+    - secure: MlXKFb5wgjSJE2VLYXVAL1zHsmpuUKBIyZqurZGKcL2PmPNB7Ls4+i/WNICmcgWqnlQrCV+qMEkmcJ45KuUf2okMY6vb/0crOSucA8C253GD+IQo/O1+k+sZVIsJ+7sl9DswHYOSiq6k+6qs1Dlmk2OFKgMG9Io5GC5MNpQBfjCnO8UrqN0VRiemo9+rctyp7fDZSnOXPuJ6w4Z4sY254snFgLnNMehbQxxSE19Oan/W0ijydvUl+no5qx550dgO1nwUAemZrU4/CxlIcFVXckAhrPSGXu0RYrxrnfVQfheW3w+wMLYm/Ojft70FwQQeI6Tviyy7oLOUHdQ6fM+2AruCvGWch9Y6Jj6JNjlE3E3uOMfq9f+a07kbrlN/IVRLrtiON4la6SQPt/FMYV8PGdwd6Z/RnsPAvGoTP/WYPfsgMXvsP3SGn/LnxJ+dIjOUcpTmnZ4NAbBdryWTvw3iy6Sj3W8G7XU8jSRzvpv0/ZV90ZgWUhsEIEjMUoDgSwE6UnLX6v4JKcfX4i3LmTUK6MPO5FtI0x97XzusaJk4hefR6PNsPozbSBKNdFE/ZHyik4/IZv3ysuowkx+OF3f80ZTq9wLnZ1wpOt/WVjjjShzVNXach6Gt/DCEtj/uRukPfFvms0KThLGu9MJRohkI83uQqWB5urhmWekzR37/POM=
+
+before_script:
+  - mkdir bin
+  - wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip
+    -O bin/terraform.zip
+  - unzip bin/terraform.zip -d bin
+  - rm bin/terraform.zip
+  - "./bin/terraform init terraform"
+
 jobs:
   include:
-  - stage: apply
-    name: Applying changes
-    before_script:
-    - mkdir bin
-    - wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip
-      -O bin/terraform.zip
-    - unzip bin/terraform.zip -d bin
-    - rm bin/terraform.zip
-    - "./bin/terraform init terraform"
-    script:
-    - "./bin/terraform plan terraform"
-    - "./bin/terraform apply -auto-approve terraform"
-  - stage: delete
-    name: Delete all created resources
-    before_script:
-    - mkdir bin
-    - wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip
-      -O bin/terraform.zip
-    - unzip bin/terraform.zip -d bin
-    - rm bin/terraform.zip
-    - "./bin/terraform init terraform"
-    script:
-    - "./bin/terraform destroy -auto-approve terraform"
+    - stage: apply
+      name: Applying changes
+      before_script:
+        - mkdir bin
+        - wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip
+          -O bin/terraform.zip
+        - unzip bin/terraform.zip -d bin
+        - rm bin/terraform.zip
+        - "./bin/terraform init terraform"
+      script:
+        - "./bin/terraform plan terraform"
+        - "./bin/terraform apply -auto-approve terraform"
+    - stage: delete
+      name: Delete all created resources
+      script:
+        - "./bin/terraform destroy -auto-approve terraform"
