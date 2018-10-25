@@ -1,8 +1,14 @@
 language: generic
 
+cache: ".terraform"
+
+env:
+  secure: P9MX6HaOAr08cWgj6yy30oEzUt8TJfydMPelkyTa48LPHnHAC+e+zvoY+9RbiUhfba2QdFXnDp9e6vkcZndG3yc5fFgNytMRFoEpG2jgI7HxvgDWV6iBeN3Z/8VqAzy6aX9vgfVHNJP8DrPn0L/UYnTWvIHxd9k1qVso5H3+BApx/w27ITJlfeWVozxrbJ3v4y9d/GmTBzSKElegpd1jYS7d8XIxhaXEbEJZs3AU/tU5mIGbVr1Is2Tri0Uxqr0vRtyHGfCzwAvk9Nv/VGEHOeY+x3aRwwf7/2x5mbxoEhK14fjjrqtboQwZNMNEzsOcnH6aaeoHhKwX7PbWzBaKV0HlBwz2Fl2zibnWsPuRSlHE9LUwTlnqo/N22NrDf0tGN65NE9W+b1CS6cbqr4ugFkZkKy9c4xt+AUWKWTQt+MrnX/dgBurropncmZa2JHzdkzQq8F7lRymTOLjj22x7hGVmr4lACSnqT2jVVB2oY5s/d1KGlfmnKzj6CS0sV8lwjsY6YszIzrSPADNU9LlOxWZ651gnz8eVAQSuPByEYpTECsJq6ErD17ZNeMA0PJinD1pH7slbPLiFLqrYSZBT/rOV/BqphaA/FaJo4JFn6LoJO8ZE6xc8cLdS+AWH8KETWvPrj6XbXBKkU7UhOZoM+1emTpZ9BN6KQlsIpebRa/c=
+
 before_script:
   - mkdir bin
-  - wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip -O bin/terraform.zip
+  - wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip
+    -O bin/terraform.zip
   - unzip bin/terraform.zip -d bin
   - rm bin/terraform.zip
   - "./bin/terraform init terraformFiles"
