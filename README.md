@@ -11,7 +11,7 @@ Lambda Landschaft erstellen die via terraform jederzeit neu hochgefahren bzw. ze
 ### Travis & Github
 
 Ich benutze TravisCI zum bauen und deployen meiner Infrastruktur. Vorteil hiervon ist, dass Travis CI eine nahtlose Verbindung zu Github hat
-und für OpenSource und private Projects umsonst nutzbar ist. Die Pipeline Definition für die Infrastruktur ist in der Datei [./travis]()
+und für OpenSource und private Projects umsonst nutzbar ist. Die Pipeline Definition für die Infrastruktur ist in der Datei [.travis.yml](.travis.yml)
 
 ### Terraform
 
