@@ -2,7 +2,7 @@ language: generic
 
 before_script:
   - mkdir bin
-  - wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_arm.zip -O bin/terraform.zip
+  - wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip -O bin/terraform.zip
   - unzip bin/terraform.zip -d bin
   - rm bin/terraform.zip
 
