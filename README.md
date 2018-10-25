@@ -8,6 +8,9 @@ Lambda Landschaft erstellen die via terraform jederzeit neu hochgefahren bzw. ze
 
 ## Infrastructure
 
+Voraussetzung für das erfolgreiche anlegen ist, dass travis für terraform secrets gesetzt hat. Die secrets können über die Commandline mit
+`travis encrypt TF_VAR_access_key=<<SuperAccessKey>> --add env.gobal -p` und `travis encrypt TF_VAR_secret_key=<<SuperSecretKey>> --add env.gobal -p`
+
 ### Travis & Github
 
 Ich benutze TravisCI zum bauen und deployen meiner Infrastruktur. Vorteil hiervon ist, dass Travis CI eine nahtlose Verbindung zu Github hat
