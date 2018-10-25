@@ -6,4 +6,4 @@ before_script:
 
 script:
   - ls -la
-  - terraform init terraform
+  - tf init terraform
