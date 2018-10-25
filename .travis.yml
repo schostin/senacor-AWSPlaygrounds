@@ -16,7 +16,8 @@ before_script:
   - unzip bin/terraform.zip -d bin
   - rm bin/terraform.zip
   - "./bin/terraform init terraform"
-  - pip3 install awscli --upgrade --user
+  - pip install --upgrade pip
+  - pip install awscli --upgrade
 
 jobs:
   include:
