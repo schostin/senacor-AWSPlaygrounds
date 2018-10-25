@@ -21,15 +21,7 @@ jobs:
   include:
     - stage: apply
       name: Applying changes
-      before_script:
-        - mkdir bin
-        - wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_amd64.zip
-          -O bin/terraform.zip
-        - unzip bin/terraform.zip -d bin
-        - rm bin/terraform.zip
-        - "./bin/terraform init terraform"
       script:
-        - "./bin/terraform plan terraform"
         - "./bin/terraform apply -auto-approve terraform"
     - stage: delete
       name: Delete all created resources

@@ -12,8 +12,6 @@ Voraussetzung für das erfolgreiche anlegen ist, dass travis für terraform secr
 `travis encrypt TF_VAR_access_key=<<SuperAccessKey>> --add env.gobal -p` und `travis encrypt TF_VAR_secret_key=<<SuperSecretKey>> --add env.gobal -p`.
 Es empfiehlt sich natürlich, einen extra user für travis_ci in aws anzulegen und diesem nur die benötigten Rechte zu geben.
 
-Da für die Uploads der Funktionen ein extra Bucket benötigt wird, gibt es hierfür eine Stage, die dieses Bucket anlegt (via aws client und nicht via terraform).
-
 ### Travis & Github
 
 Ich benutze TravisCI zum bauen und deployen meiner Infrastruktur. Vorteil hiervon ist, dass Travis CI eine nahtlose Verbindung zu Github hat
@@ -21,6 +19,15 @@ und für OpenSource und private Projects umsonst nutzbar ist. Die Pipeline Defin
 Travis CI ist in der Lage die terraform scripts auszuführen und anzulegen.
 
 ### Terraform
+
+Der Terraform code ist aufgeteilt in 4 Dateien:
+
+* [aws.tf](terraform/aws.tf) enthält aws als Provider und definiert die zu nutzenden access keys, etc.
+* [lambda.tf](terraform/lambda.tf) enthält alle lambda Definitionen.
+* [iam.tf](terraform/iam.tf) enthält alle benötigten IAM Rollen Definitionen.
+* [variables.tf](terraform/variables.tf) enthält alle benötigten Variablen.
+
+Die Lambda Funktionen werden automatisch verpackt und bei Änderungen hochgeladen.
 
 ## Code
 
