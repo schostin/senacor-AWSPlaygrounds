@@ -17,4 +17,4 @@ before_script:
 
 script:
   - "./bin/terraform plan terraformFiles"
-  - "./bin/terraform apply terraformFiles -auto-approve"
+  - "./bin/terraform apply -auto-approve terraformFiles"
