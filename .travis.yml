@@ -15,6 +15,22 @@ before_script:
   - rm bin/terraform.zip
   - "./bin/terraform init terraformFiles"
 
-script:
-  - "./bin/terraform plan terraformFiles"
-  - "./bin/terraform apply -auto-approve terraformFiles"
+jobs:
+  include:
+    - stage: initialize
+      name: Initialize S3 buckets for lambda upload
+      script:
+        - "./bin/terraform plan terraformFiles/s3.tf"
+        - "./bin/terraform apply -auto-approve terraformFiles/s3.tf"
+    - stage: upload
+      name: Upload changed Lambda Functions
+      script:
+        - echo 'Uploading lambda functions'
+    - stage: apply
+      name: Applying changes
+      script:
+        - echo 'Applying changes'
+    - stage: delete
+      name: Delete all created resources
+      script:
+        - "./bin/terraform destroy -auto-approve terraformFiles"
