@@ -1,7 +1,5 @@
 language: generic
 
-cache: ".terraform"
-
 env:
   global:
     # TF_VAR_access_key
