@@ -1,6 +1,7 @@
 language: generic
 
 before_script:
+  - mkdir bin
   - wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_arm.zip -O bin/terraform.zip
   - unzip -o bin/terraform.zip
   - rm bin/terraform.zip
@@ -8,4 +9,4 @@ before_script:
 script:
   - ls -la
   - ls -la bin
-  - ./bin/terraform init terraformFiles
+  - "./bin/terraform init terraformFiles"
