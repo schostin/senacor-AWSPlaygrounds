@@ -1,14 +1,9 @@
 language: generic
 
-addons:
-  apt:
-    packages:
-      - unzip
-
 before_script:
-  - wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_arm.zip -O terraform.zip
-  - unzip terraform.zip -d terraform
+  - wget https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.10_linux_arm.zip -O terraform_compressed.zip
+  - unzip terraform_compressed.zip
 
 script:
   - ls -la
-  - ls terraform -la
+  - terraform init terraform
