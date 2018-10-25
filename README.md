@@ -35,6 +35,4 @@ Die Lambda Funktionen werden automatisch verpackt und bei Änderungen hochgelade
 
 ### Lambda
 
-### DynamoDb
-
 ### API Gateway

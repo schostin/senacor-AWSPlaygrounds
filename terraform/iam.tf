@@ -1,4 +1,4 @@
-data "aws_iam_policy_document" "loginLambda_policy" {
+data "aws_iam_policy_document" "helloWorldLambda_policy" {
   statement {
     actions = ["sts:AssumeRole"]
     principals {
@@ -9,14 +9,14 @@ data "aws_iam_policy_document" "loginLambda_policy" {
   }
 }
 
-resource "aws_iam_role" "loginLambda" {
-  name = "schibbler_loginLambda_iam"
+resource "aws_iam_role" "helloWorldLambda" {
+  name = "schibbler_helloWorldLambda_role"
   
-  assume_role_policy = "${data.aws_iam_policy_document.loginLambda_policy.json}"
+  assume_role_policy = "${data.aws_iam_policy_document.helloWorldLambda_policy.json}"
 }
 
 
-resource "aws_iam_role_policy_attachment" "loginLambda_policyAttachment" {
-  role = "${aws_iam_role.loginLambda.name}"
+resource "aws_iam_role_policy_attachment" "helloWorldLambda_policyAttachment" {
+  role = "${aws_iam_role.helloWorldLambda.name}"
   policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
 }

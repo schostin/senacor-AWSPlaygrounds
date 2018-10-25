@@ -26,4 +26,5 @@ jobs:
     - stage: delete
       name: Delete all created resources
       script:
-        - "./bin/terraform destroy -auto-approve terraform"
+        # - "./bin/terraform destroy -auto-approve terraform"
+        - echo "Will currently not delete anything."
